@@ -97,8 +97,8 @@ end
 
 if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Value:lower() == getgenv().WantedStand:lower() or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Name:lower() == getgenv().WantedStand:lower() then
     if getgenv().Webhook ~= "" then
-        return WebhookFunc("Stand already aquired.")
-        else return Notification("Notification", "Stand already aquired.")
+        return WebhookFunc("Stand already acquired.")
+        else return Notification("Notification", "Stand already acquired.")
     end
 end
 
@@ -139,8 +139,8 @@ StandFarm()
 repeat wait()
 until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Value:lower() == getgenv().WantedStand:lower() or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Name:lower() == getgenv().WantedStand:lower()
 if getgenv().Webhook ~= "" then
-    WebhookFunc("Stand aquired!")
-    else Notification("Notification", "Stand aquired!")
+    WebhookFunc("Stand acquired!")
+    else Notification("Notification", "Stand acquired!")
 end
 getgenv().Enabled = false
 game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", true)
