@@ -23,6 +23,10 @@ local function Notification(Title, Text)
     })
 end
 
+--Check
+game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", false)
+game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Dodge")
+
 --Stands
 local Stands = {
     "Anubis",
@@ -76,7 +80,6 @@ end
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(workspace:FindFirstChild("Arrow"))
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Arrow"))
 game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
-game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Dodge")
 
 --Split time between each part
 local Divided = getgenv().DelayInSeconds / 4
