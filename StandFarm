@@ -73,6 +73,10 @@ if not getgenv().Enabled then
     return nil
 end
 
+game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(workspace:FindFirstChild("Arrow"))
+game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Arrow"))
+game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
+
 --Split time between each part
 local Divided = getgenv().DelayInSeconds / 4
     
@@ -87,7 +91,6 @@ if getgenv().WantedStand:lower() == "killerqueen" then
     else Find = "STAND"
 end
 
---Check stand
 if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Value:lower() == getgenv().WantedStand:lower() or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Name:lower() == getgenv().WantedStand:lower() then
     getgenv().Enabled = false
 end
