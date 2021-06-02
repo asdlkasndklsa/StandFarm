@@ -31,6 +31,7 @@ end
 --Check
 game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", false)
 game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Dodge")
+wait(5)
 
 --Stands
 local Stands = {
