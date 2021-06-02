@@ -76,6 +76,7 @@ end
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(workspace:FindFirstChild("Arrow"))
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Arrow"))
 game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
+game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Dodge")
 
 --Split time between each part
 local Divided = getgenv().DelayInSeconds / 4
