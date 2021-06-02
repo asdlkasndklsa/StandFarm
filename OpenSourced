@@ -148,9 +148,9 @@ StandFarm()
 --Found Stand
 repeat wait()
 until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Value:lower() == getgenv().WantedStand:lower() or game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Find, true).Name:lower() == getgenv().WantedStand:lower()
+getgenv().Enabled = false
 if getgenv().Webhook ~= "" then
     WebhookFunc("Stand acquired!")
     else Notification("Notification", "Stand acquired!")
 end
-getgenv().Enabled = false
 game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Appear", true)
