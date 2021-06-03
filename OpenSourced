@@ -78,6 +78,8 @@ if not getgenv().Enabled then
     return nil
 end
 
+game:GetService("ReplicatedStorage").Main.Input:FireServer("Alternate", "Dodge")
+wait(3)
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(workspace:FindFirstChild("Arrow"))
 game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Arrow"))
 game:GetService("ReplicatedStorage").ItemEvents.Arrow:FireServer()
